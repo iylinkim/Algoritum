@@ -1,19 +1,18 @@
-function makeIntoBinary(num){
-    let stack = [],
-        remainder,
-        binaryString = '';
-    
-    while(num > 0){
-        remainder = Math.floor(num % 2);
-        stack.push(num);
-        num = Math.floor(num % 2);
+function solution(n){
+    let binaryString = '';
+    let arr = [];
+    let remainder;
+
+    while(n > 0){
+        remainder = Math.floor(n%2);
+        arr.push(remainder);
+        n = Math.floor(n/2);
     }
 
-    while(!stack.length === 0){
-        binaryString += stack.pop().toString();
+    while(arr.length !== 0){
+        binaryString += arr.pop().toString();
     }
-
     return binaryString;
 }
 
-console.log(makeIntoBinary(21));
+console.log('binary number: ' + solution(21));
