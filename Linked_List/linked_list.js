@@ -127,4 +127,4 @@ list.append(40);
 list.insert(1, 4);
 list.remove(4);
 
-console.log(list.getHead());
+
