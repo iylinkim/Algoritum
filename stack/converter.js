@@ -39,4 +39,4 @@ function converter(num, base) {
   return str;
 }
 
-console.log(converter(29, 8));
+console.log(converter(150, 16));
